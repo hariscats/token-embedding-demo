@@ -13,10 +13,10 @@ param webAppName string = 'llmDemoWebApp'
   'BASIC'
   'STANDARD'
 ])
-param skuTier string = 'FREE'
+param skuTier string = 'BASIC'
 
 @description('App Service Plan SKU name: F1 (Free), B1/B2/B3 (Basic), S1/S2/S3 (Standard).')
-param skuName string = 'F1'
+param skuName string = 'B1'
 
 resource appServicePlan 'Microsoft.Web/serverfarms@2022-03-01' = {
   name: appServicePlanName
@@ -36,5 +36,6 @@ resource webApp 'Microsoft.Web/sites@2022-03-01' = {
     siteConfig: {
       linuxFxVersion: 'PYTHON|3.9'
     }
+    reserved: true  // This enables Linux hosting
   }
 }

@@ -106,7 +106,7 @@ def run_dev_server():
     This function can be called directly for local testing
     or triggered by your environment when deploying.
     """
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 5050))
     app.run(host="0.0.0.0", port=port)
 
 
