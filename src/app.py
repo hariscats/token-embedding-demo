@@ -101,7 +101,7 @@ def home():
 
 def run_dev_server():
     """
-    Runs the Flask development server on 0.0.0.0:5000.
+    Runs the Flask development server on 0.0.0.0:5050.
     
     This function can be called directly for local testing
     or triggered by your environment when deploying.
